@@ -11,7 +11,7 @@ with open("model.h5", "wb") as f:
     f.write(response.content) 
 
 # โหลดโมเดลด้วย TensorFlow 
-model = tf.keras.models.load_model("model.h5") 
+model = load_model("model.h5") 
 
 print("โหลดโมเดลสำเร็จแล้ว!")
 import streamlit as st
@@ -63,4 +63,5 @@ if uploaded_file is not None:
     confidence = np.max(prediction)
 
     st.markdown(f"<h3 style='color:#27ae60;'>🧠 ประเภทขยะที่ทำนายได้: <strong>{predicted_class}</strong></h3>", unsafe_allow_html=True)
+
     st.markdown(f"<h3 style='color:#2980b9;'>📊 ความมั่นใจ: <strong>{confidence:.2f}</strong></h3>", unsafe_allow_html=True)
