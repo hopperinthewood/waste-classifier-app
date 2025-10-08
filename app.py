@@ -11,7 +11,7 @@ with open("model.h5", "wb") as f:
     f.write(response.content) 
 
 # โหลดโมเดลด้วย TensorFlow 
-tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 model = load_model("model.h5") 
 
 print("โหลดโมเดลสำเร็จแล้ว!")
@@ -66,5 +66,6 @@ if uploaded_file is not None:
     st.markdown(f"<h3 style='color:#27ae60;'>🧠 ประเภทขยะที่ทำนายได้: <strong>{predicted_class}</strong></h3>", unsafe_allow_html=True)
 
     st.markdown(f"<h3 style='color:#2980b9;'>📊 ความมั่นใจ: <strong>{confidence:.2f}</strong></h3>", unsafe_allow_html=True)
+
 
 
