@@ -13,7 +13,8 @@ with open("model.h5", "wb") as f:
 # โหลดโมเดลด้วย TensorFlow 
 model = tf.keras.models.load_model("model.h5") 
 
-print("โหลดโมเดลสำเร็จแล้ว!")import streamlit as st
+print("โหลดโมเดลสำเร็จแล้ว!")
+import streamlit as st
 
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
