@@ -42,7 +42,7 @@ with col2:
 # แสดงผลการจำแนก 
 if uploaded_file is not None: 
     img = Image.open(uploaded_file) 
-    st.image(img, caption="📷 ภาพที่อัปโหลด", use_column_width=True) 
+    st.image(img, caption="📷 ภาพที่อัปโหลด", use_container_width=True) 
     
     img = img.resize((128, 128)) 
     img_array = image.img_to_array(img) / 255.0 
@@ -54,3 +54,4 @@ if uploaded_file is not None:
     
     st.markdown(f"<h3 style='color:#27ae60;'>🧠 ประเภทขยะที่ทำนายได้: <strong>{predicted_class}</strong></h3>", unsafe_allow_html=True) 
     st.markdown(f"<h3 style='color:#2980b9;'>📊 ความมั่นใจ: <strong>{confidence:.2f}</strong></h3>", unsafe_allow_html=True)
+
